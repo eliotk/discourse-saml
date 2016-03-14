@@ -14,7 +14,7 @@ class SAMLAuthenticator < ::Auth::OAuth2Authenticator
   def register_middleware(omniauth)
     omniauth.provider :saml,
                       :name => 'saml',
-                      :issuer => 'discourse',
+                      :issuer => GlobalSetting.saml_issuer,
                       :idp_sso_target_url => GlobalSetting.saml_target_url,
                       :idp_cert_fingerprint => GlobalSetting.saml_idp_cert_fingerprint
   end
