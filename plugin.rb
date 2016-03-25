@@ -22,7 +22,7 @@ class SAMLAuthenticator < ::Auth::OAuth2Authenticator
   def after_authenticate(auth)
     result = Auth::Result.new
 
-    raise auth.inspect
+    # raise auth.inspect
     uid = auth[:uid]
     result.name = auth[:info].name
     result.username = uid
