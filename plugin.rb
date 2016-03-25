@@ -52,3 +52,5 @@ auth_provider :title => button_title,
               :frame_width => 600,
               :frame_height => 380,
               :background_color => '#003366'
+
+OmniAuth.config.failure_raise_out_environments = ['production']
